@@ -14,7 +14,7 @@ public class PlayerVersusNpcTradeStrategy implements ActionStrategy {
         throw new NotSupportedActionTypeException("not supported yet");
     }
 
-    @Override
+  @Override
     public ActionType actionType() {
         return ActionType.PLAYER_VERSUS_NPC_TRADE;
     }
