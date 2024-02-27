@@ -14,7 +14,7 @@ public class PlayerVersusEnvironmentBuffStrategy implements ActionStrategy {
         throw new NotSupportedActionTypeException("not supported yet");
     }
 
-    @Override
+   @Override
     public ActionType actionType() {
         return ActionType.PLAYER_VERSUS_ENVIRONMENT_BUFF;
     }

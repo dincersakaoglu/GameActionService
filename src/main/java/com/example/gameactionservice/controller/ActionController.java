@@ -1,8 +1,9 @@
 package com.example.gameactionservice.controller;
 
-import com.example.gameactionservice.service.ActionContext;
+
 import com.example.gameactionservice.model.Action;
 import com.example.gameactionservice.model.ActionResult;
+import com.example.gameactionservice.service.ActionService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,11 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/action")
 public class ActionController {
 
-    private final ActionContext actionContext;
+    private final ActionService actionService;
 
     @PostMapping()
     public ActionResult process(@RequestBody Action action) {
-        return actionContext.process(action);
+        return actionService.process(action);
     }
 
 }

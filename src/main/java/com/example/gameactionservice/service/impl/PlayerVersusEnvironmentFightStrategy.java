@@ -21,7 +21,7 @@ public class PlayerVersusEnvironmentFightStrategy implements ActionStrategy {
         }
     }
 
-    @Override
+   @Override
     public ActionType actionType() {
         return ActionType.PLAYER_VERSUS_ENVIRONMENT_FIGHT;
     }
