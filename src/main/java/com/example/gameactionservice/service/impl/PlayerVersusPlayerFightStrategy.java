@@ -1,5 +1,6 @@
 package com.example.gameactionservice.service.impl;
 
+import com.example.gameactionservice.constants.Message;
 import com.example.gameactionservice.service.ActionStrategy;
 import com.example.gameactionservice.enums.ActionType;
 import com.example.gameactionservice.model.Action;
@@ -26,9 +27,9 @@ public class PlayerVersusPlayerFightStrategy implements ActionStrategy {
         GameCharacter CharacterTwo = action.getCharacter2();
 
         if (CharacterOne.getAttack() >= CharacterTwo.getAttack()) {
-            return new ActionResult("Character 1 wins");
+            return new ActionResult(Message.CHARACTER_1_WINS);
         } else {
-            return new ActionResult("Character 2 wins");
+            return new ActionResult(Message.CHARACTER_2_WINS);
         }
     }
     @Override

@@ -1,5 +1,6 @@
 package com.example.gameactionservice.service.impl;
 
+import com.example.gameactionservice.constants.Message;
 import com.example.gameactionservice.service.ActionStrategy;
 import com.example.gameactionservice.enums.ActionType;
 import com.example.gameactionservice.model.Action;
@@ -15,9 +16,9 @@ public class PlayerVersusEnvironmentFightStrategy implements ActionStrategy {
         GameCharacter monster = action.getCharacter2();
 
         if (character.getDefence() >= monster.getDefence()) {
-            return new ActionResult("Character wins");
+            return new ActionResult(Message.CHARACTER_WINS);
         } else {
-            return new ActionResult("Monster wins");
+            return new ActionResult(Message.MONSTER_WINS);
         }
     }
 

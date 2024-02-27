@@ -1,5 +1,6 @@
 package com.example.gameactionservice.service.impl;
 
+import com.example.gameactionservice.constants.Message;
 import com.example.gameactionservice.service.ActionStrategy;
 import com.example.gameactionservice.enums.ActionType;
 import com.example.gameactionservice.exception.NotSupportedActionTypeException;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class PlayerVersusNpcTradeStrategy implements ActionStrategy {
     @Override
     public ActionResult process(Action action) {
-        throw new NotSupportedActionTypeException("not supported yet");
+        throw new NotSupportedActionTypeException(Message.NOT_SUPPORTED_YET);
     }
 
   @Override
