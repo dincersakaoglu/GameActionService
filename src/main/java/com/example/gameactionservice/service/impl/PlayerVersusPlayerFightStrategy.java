@@ -19,7 +19,7 @@ public class PlayerVersusPlayerFightStrategy implements ActionStrategy {
      * Processes the action of a player versus player fight.
      *
      * @param action the action to process
-     * @return the result of the fight
+     * @return  the result of the fight
      */
     @Override
     public ActionResult  process(Action action) {
