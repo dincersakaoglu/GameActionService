@@ -1,4 +1,4 @@
-package com.example.gameactionservice.controller;
+package com.example.gameactionservice.exception;
 
 import com.example.gameactionservice.exception.ExceptionResponseDto;
 import com.example.gameactionservice.exception.NotSupportedActionTypeException;
