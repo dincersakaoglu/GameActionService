@@ -1,5 +1,6 @@
 package com.example.gameactionservice.service.impl;
 
+import com.example.gameactionservice.constants.Message;
 import com.example.gameactionservice.enums.ActionType;
 import com.example.gameactionservice.model.Action;
 import com.example.gameactionservice.model.ActionResult;
@@ -36,7 +37,7 @@ public class ActionServiceImpl implements ActionService {
         ActionType actionType = action.getType();
         ActionStrategy actionStrategy = handlerMap.get(actionType);
         if (actionStrategy == null) {
-            throw new IllegalArgumentException("No handler found for action type: " + actionType);
+            throw new IllegalArgumentException(Message.NO_HANDLER_FOUND_FOR_ACTION_TYPE + actionType);
         }
         return actionStrategy.process(action);
     }
