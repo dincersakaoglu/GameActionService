@@ -56,10 +56,10 @@ public class ActionServiceImpl implements ActionService {
     @Override
     public ActionResult process(Action action) {
         ActionType actionType = action.getType();
-        ActionStrategy actionStrategy = handlerMap.get(actionType);
-        if (actionStrategy == null) {
+        ActionStrategy selectedActionStrategy = handlerMap.get(actionType);
+        if (selectedActionStrategy == null) {
             throw new IllegalArgumentException(Message.NO_HANDLER_FOUND_FOR_ACTION_TYPE + actionType);
         }
-        return actionStrategy.process(action);
+        return selectedActionStrategy.process(action);
     }
 }
